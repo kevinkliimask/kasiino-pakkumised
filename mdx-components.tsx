@@ -19,9 +19,7 @@ const components = {
     <h3 className="text-lg font-medium mb-2" {...props} />
   ),
   h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
-  p: (props: ParagraphProps) => (
-    <p className="mb-4" {...props} />
-  ),
+  p: (props: ParagraphProps) => <p className="mb-4" {...props} />,
   ol: (props: ListProps) => (
     <ol className="list-decimal pl-5 space-y-2 mb-4" {...props} />
   ),
@@ -63,26 +61,6 @@ const components = {
       </a>
     );
   },
-  Table: ({ data }: { data: { headers: string[]; rows: string[][] } }) => (
-    <table>
-      <thead>
-        <tr>
-          {data.headers.map((header, index) => (
-            <th key={index}>{header}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {data.rows.map((row, index) => (
-          <tr key={index}>
-            {row.map((cell, cellIndex) => (
-              <td key={cellIndex}>{cell}</td>
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  ),
   blockquote: (props: BlockquoteProps) => (
     <blockquote
       className="text-lg ml-[0.075em] border-l-3 border-gray-300 pl-4 py-4 text-muted-foreground mb-4 *:mb-0"

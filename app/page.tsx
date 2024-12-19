@@ -30,7 +30,7 @@ export default async function Home() {
       filenames
         .filter((filename) => filename.endsWith('page.mdx'))
         .map(async (filename) => {
-          const pageModule = await import(`./pakkumine/${filename}`);
+          const pageModule = await import(`@/app/pakkumine/${filename}`);
           return {
             ...pageModule.metadata,
             path: filename.replace('/page.mdx', ''),

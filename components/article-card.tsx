@@ -8,7 +8,7 @@ type ArticleCardProps = {
 };
 
 const ArticleCard = async ({ title, slug, endDate }: ArticleCardProps) => {
-  const image = (await import(`../app/pakkumine/${slug}/header.webp`)).default;
+  const image = (await import(`@/app/pakkumine/${slug}/header.webp`)).default;
 
   return (
     <Link href={`/pakkumine/${slug}`}>

@@ -1,0 +1,43 @@
+import ArticleHeader from '@/components/article-header';
+import BonusValid from '@/components/bonus-valid';
+import headerImage from './header.webp';
+import Table from '@/components/table';
+
+export const metadata = {
+  title: 'Highroller tervituspakkumine - tasuta 200 spinni 10 päeva peale',
+  slug: 'highroller-tervituspakkumine',
+  createdAt: new Date('2024-12-20'),
+  endDate: null,
+};
+
+<ArticleHeader image={headerImage} title={metadata.title} />
+
+<BonusValid date={metadata.endDate} />
+
+## Kuidas boonus saada?
+
+1. [Mine Highroller lehele](https://www.highroller.com)
+2. Tee 20€ sissemakse
+3. Saad 10 päeva jooksul 200 spinni järgnevates mängudes:
+
+<Table
+  headers={['Päev', 'Mäng']}
+  rows={[
+    ['1. päev', 'Money Train 3'],
+    ['2. päev', 'Midas Golden Touch'],
+    ['3. päev', 'Fire in the Hole XBomb'],
+    ['4. päev', 'Gates of Olympus'],
+    ['5. päev', 'Esqueleto Explosivo 2'],
+    ['6. päev', 'Sweet Bonanza'],
+    ['7. päev', 'Razor Shark'],
+    ['8. päev', 'Carnival Queen'],
+    ['9. päev', 'Starstruck'],
+    ['10. päev', 'Big Bass Bonanza'],
+  ]}
+/>
+
+Spinnide väärtus on 200 x 0.1€ = 20€.
+
+Sissemakse tuleb läbi mängida 1x.
+
+Allikas: [Highrolleri tervitusboonus](https://www.highroller.com/et-ee/promotions/tervitusboonus)
