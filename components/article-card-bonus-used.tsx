@@ -19,15 +19,7 @@ const ArticleCardBonusUsed = ({ slug }: ArticleCardBonusUsedProps) => {
     }
   }, [slug]);
 
-  return (
-    <>
-      {isBonusUsed && (
-        <span className="text-sm text-green-500 font-bold">
-          Boonus kasutatud
-        </span>
-      )}
-    </>
-  );
+  return isBonusUsed && <span className="text-sm text-green-500 font-bold">Boonus kasutatud</span>;
 };
 
 export default ArticleCardBonusUsed;

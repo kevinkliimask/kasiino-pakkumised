@@ -1,8 +1,8 @@
 import ArticleHeader from '@/components/article-header';
 import BonusValid from '@/components/bonus-valid';
 import headerImage from './header.webp';
+import MarkBonusUsedButton from '@/components/mark-bonus-used-button';
 import Table from '@/components/table';
-import BonusUsed from '@/components/bonus-used';
 
 export const metadata = {
   title: 'Highroller tervituspakkumine - tasuta 200 spinni 10 päeva peale',
@@ -43,4 +43,4 @@ Sissemakse tuleb läbi mängida 1x.
 
 Allikas: [Highrolleri tervitusboonus](https://www.highroller.com/et-ee/promotions/tervitusboonus)
 
-<BonusUsed slug={metadata.slug} />
+<MarkBonusUsedButton slug={metadata.slug} />
