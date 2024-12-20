@@ -33,9 +33,9 @@ const MarkBonusUsedButton = ({ slug }: BonusUsedProps) => {
         isLoading
           ? 'bg-gray-200 animate-pulse'
           : isUsed
-          ? 'bg-green-500 hover:bg-green-500/90'
-          : 'bg-primary hover:bg-primary/90',
-        'text-white font-semibold cursor-pointer py-2 px-4 transition-all rounded-[10px] my-4 mx-auto w-full max-w-sm',
+            ? 'bg-green-500 hover:bg-green-500/90'
+            : 'bg-primary hover:bg-primary/90',
+        'text-primary-foreground font-semibold cursor-pointer py-2 px-4 transition-all rounded-[10px] my-4 mx-auto w-full max-w-sm',
       )}
       onClick={handleToggleBonus}
       disabled={isLoading}
