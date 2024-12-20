@@ -1,16 +1,20 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 type BonusUsedProps = {
   slug: string;
 };
 
 const MarkBonusUsedButton = ({ slug }: BonusUsedProps) => {
-  const [isUsed, setIsUsed] = useState(() => {
+  const [isUsed, setIsUsed] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
     const usedBonuses = JSON.parse(localStorage.getItem('used-bonuses') || '[]');
-    return usedBonuses.includes(slug);
-  });
+    setIsUsed(usedBonuses.includes(slug));
+  }, [slug]);
 
   const handleToggleBonus = () => {
     const usedBonuses = JSON.parse(localStorage.getItem('used-bonuses') || '[]');
@@ -21,6 +25,10 @@ const MarkBonusUsedButton = ({ slug }: BonusUsedProps) => {
     localStorage.setItem('used-bonuses', JSON.stringify(newUsedBonuses));
     setIsUsed(!isUsed);
   };
+
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <button
