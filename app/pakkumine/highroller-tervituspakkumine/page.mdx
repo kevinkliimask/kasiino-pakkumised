@@ -2,6 +2,7 @@ import ArticleHeader from '@/components/article-header';
 import BonusValid from '@/components/bonus-valid';
 import headerImage from './header.webp';
 import Table from '@/components/table';
+import BonusUsed from '@/components/bonus-used';
 
 export const metadata = {
   title: 'Highroller tervituspakkumine - tasuta 200 spinni 10 päeva peale',
@@ -13,6 +14,8 @@ export const metadata = {
 <ArticleHeader image={headerImage} title={metadata.title} />
 
 <BonusValid date={metadata.endDate} />
+
+<BonusUsed slug={metadata.slug} />
 
 ## Kuidas boonus saada?
 
