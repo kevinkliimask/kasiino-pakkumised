@@ -1,5 +1,7 @@
-import Image from 'next/image';
 import { Link } from 'next-view-transitions';
+import Image from 'next/image';
+
+import ArticleCardBonusUsed from '@/components/article-card-bonus-used';
 
 type ArticleCardProps = {
   title: string;
@@ -21,20 +23,23 @@ const ArticleCard = async ({ title, slug, endDate }: ArticleCardProps) => {
             className="object-cover group-hover:grayscale transition-all"
           />
         </div>
-        <div className="flex flex-col gap-2 p-4 flex-grow">
+        <div className="flex flex-col gap-2 p-4 flex-grow justify-between">
           <h2 className="text-lg font-semibold">{title}</h2>
-          {endDate ? (
-            <p className="text-sm text-muted-foreground">
-              Kehtib kuni{' '}
-              {endDate.toLocaleDateString('et-EE', {
-                day: '2-digit',
-                month: '2-digit',
-                year: 'numeric',
-              })}
-            </p>
-          ) : (
-            <p className="text-sm text-muted-foreground">Kehtivus pole teada</p>
-          )}
+          <div>
+            <ArticleCardBonusUsed slug={slug} />
+            {endDate ? (
+              <p className="text-sm text-muted-foreground">
+                Kehtib kuni{' '}
+                {endDate.toLocaleDateString('et-EE', {
+                  day: '2-digit',
+                  month: '2-digit',
+                  year: 'numeric',
+                })}
+              </p>
+            ) : (
+              <p className="text-sm text-muted-foreground">Kehtivus pole teada</p>
+            )}
+          </div>
         </div>
       </div>
     </Link>

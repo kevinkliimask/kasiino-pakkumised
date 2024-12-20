@@ -1,6 +1,7 @@
 import ArticleHeader from '@/components/article-header';
 import BonusValid from '@/components/bonus-valid';
 import headerImage from './header.webp';
+import MarkBonusUsedButton from '@/components/mark-bonus-used-button';
 
 export const metadata = {
   title: 'Fruta tervituspakkumine - tasuta 200 spinni 4 päeva peale',
@@ -24,3 +25,5 @@ Spinnide väärtus on 200 x 0.1€ = 20€.
 Läbimängimisnõudeid pole täpsustatud, kuid ilmselt tuleb siiski sissemakse läbi mängida 1x.
 
 Allikas: [Siin need on - 200 tasuta keerutust!](https://www.fruta.com/et-ee/promotions/welcome-bonus-casino)
+
+<MarkBonusUsedButton slug={metadata.slug} />

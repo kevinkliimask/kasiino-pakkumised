@@ -1,11 +1,12 @@
 import ArticleHeader from '@/components/article-header';
 import BonusValid from '@/components/bonus-valid';
 import headerImage from './header.webp';
+import MarkBonusUsedButton from '@/components/mark-bonus-used-button';
 
 export const metadata = {
   title: 'Kanuuna tervituspakkumine - tasuta 280 spinni 2 päeva peale',
   slug: 'kanuuna-tervituspakkumine',
-  createdAt: new Date('2024-12-20'),
+  createdAt: new Date('2024-12-18'),
   endDate: null,
 };
 
@@ -26,3 +27,5 @@ Spinnide väärtus on 280 x 0.1€ = 28€.
 Sissemakse tuleb läbi mängida 1x.
 
 Allikas: [Eripakkumine Kanuunas: liitujatele 280 pärisraha tasuta spinni](https://tasutakasiino.com/kanuuna-eksklusiivne-tervitusboonus/)
+
+<MarkBonusUsedButton slug={metadata.slug} />

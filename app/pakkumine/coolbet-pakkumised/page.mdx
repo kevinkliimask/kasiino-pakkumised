@@ -1,11 +1,12 @@
 import ArticleHeader from '@/components/article-header';
 import BonusValid from '@/components/bonus-valid';
 import headerImage from './header.webp';
+import MarkBonusUsedButton from '@/components/mark-bonus-used-button';
 
 export const metadata = {
   title: 'Coolbet pakkumised - JOKER400 ja BOOK200',
   slug: 'coolbet-pakkumised',
-  createdAt: new Date('2024-12-20'),
+  createdAt: new Date('2024-12-21'),
   endDate: null,
 };
 
@@ -29,8 +30,10 @@ Sissemakse tuleb läbi mängida 1x. NB! Ruletis läbi mängimine on väiksema os
 
 > Pakkumine kehtib ka siis, kui oled varasemalt konto teinud ning juba ka sissemakse teinud.
 
-Allikad: 
+Allikad:
 
 [Coolbet Eesti superdiil – liitujaid ootab 400 tasuta spinni](https://tasutakasiino.com/coolbet-kasiino-tasuta-spinnide-superdiil/)
 
 [Kasiinoguru BOOK200](https://www.kasiinoguru.com/online-kasiinod/coolbet/)
+
+<MarkBonusUsedButton slug={metadata.slug} />

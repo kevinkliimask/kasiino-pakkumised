@@ -1,18 +1,12 @@
 'use client';
 
-import React from 'react';
-
 type BonusValidProps = {
   date: Date | null;
 };
 
 const BonusValid = ({ date }: BonusValidProps) => {
   if (!date) {
-    return (
-      <p className="text-muted-foreground font-semibold mb-4">
-        Boonuse kehtivus pole teada
-      </p>
-    );
+    return <p className="text-muted-foreground font-semibold mb-4">Boonuse kehtivus pole teada</p>;
   }
 
   const currentDate = new Date();

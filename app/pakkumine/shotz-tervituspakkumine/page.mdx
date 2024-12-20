@@ -1,11 +1,12 @@
 import ArticleHeader from '@/components/article-header';
 import BonusValid from '@/components/bonus-valid';
 import headerImage from './header.webp';
+import MarkBonusUsedButton from '@/components/mark-bonus-used-button';
 
 export const metadata = {
   title: 'Shotz tervituspakkumine - tasuta 100 spinni Big Bass Splashis',
   slug: 'shotz-tervituspakkumine',
-  createdAt: new Date('2024-12-20'),
+  createdAt: new Date('2024-12-22'),
   endDate: null,
 };
 
@@ -24,3 +25,5 @@ Spinnide väärtus on 100 x 0.1€ = 10€.
 Sissemakse tuleb läbi mängida 1x.
 
 Allikas: [Tervitusboonus – 100 ilma läbimängimise nõudeta tasuta keerutust mängus Big Bass Splash](https://www.shotz.com/et-ee/promotions/tervitusboonus)
+
+<MarkBonusUsedButton slug={metadata.slug} />

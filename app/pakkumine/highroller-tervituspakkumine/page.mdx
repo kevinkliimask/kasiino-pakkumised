@@ -1,12 +1,13 @@
 import ArticleHeader from '@/components/article-header';
 import BonusValid from '@/components/bonus-valid';
 import headerImage from './header.webp';
+import MarkBonusUsedButton from '@/components/mark-bonus-used-button';
 import Table from '@/components/table';
 
 export const metadata = {
   title: 'Highroller tervituspakkumine - tasuta 200 spinni 10 päeva peale',
   slug: 'highroller-tervituspakkumine',
-  createdAt: new Date('2024-12-20'),
+  createdAt: new Date('2024-12-19'),
   endDate: null,
 };
 
@@ -41,3 +42,5 @@ Spinnide väärtus on 200 x 0.1€ = 20€.
 Sissemakse tuleb läbi mängida 1x.
 
 Allikas: [Highrolleri tervitusboonus](https://www.highroller.com/et-ee/promotions/tervitusboonus)
+
+<MarkBonusUsedButton slug={metadata.slug} />
