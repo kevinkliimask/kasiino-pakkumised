@@ -6,7 +6,13 @@ import slotMachine from '@/assets/slot-machine.gif';
 const Header = async () => {
   return (
     <header className="flex flex-col justify-center items-center gap-4 p-8">
-      <Image unoptimized src={slotMachine} alt="slot machine" width={80} height={64} />
+      <Image
+        unoptimized
+        src={slotMachine}
+        alt="slot machine"
+        width={80}
+        height={64}
+      />
       <nav className="flex flex-row justify-between items-center">
         <div className="flex flex-row items-center gap-8">
           <Link href="/">esileht</Link>

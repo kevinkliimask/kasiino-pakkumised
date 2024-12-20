@@ -1,6 +1,7 @@
-import ArticleCardBonusUsed from './article-card-bonus-used';
-import Image from 'next/image';
 import { Link } from 'next-view-transitions';
+import Image from 'next/image';
+
+import ArticleCardBonusUsed from '@/components/article-card-bonus-used';
 
 type ArticleCardProps = {
   title: string;

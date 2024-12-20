@@ -26,9 +26,7 @@ export default async function RootLayout({
       <html lang="et">
         <body className="antialiased">
           <Header />
-          <main className="flex flex-col max-w-6xl mx-auto px-8 py-16">
-            {children}
-          </main>
+          <main className="flex flex-col max-w-6xl mx-auto px-8 py-16">{children}</main>
         </body>
       </html>
     </ViewTransitions>

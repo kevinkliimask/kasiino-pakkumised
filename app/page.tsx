@@ -6,8 +6,7 @@ import ArticleCard from '@/components/article-card';
 
 export const metadata: Metadata = {
   title: 'Kasiinode boonused',
-  description:
-    'Tasuta kasiinode boonuspakkumised, millega saab reaalselt võita',
+  description: 'Tasuta kasiinode boonuspakkumised, millega saab reaalselt võita',
 };
 
 type Article = {
@@ -18,12 +17,9 @@ type Article = {
 };
 
 export default async function Home() {
-  const filenames = await fs.readdir(
-    path.join(process.cwd(), 'app/pakkumine'),
-    {
-      recursive: true,
-    },
-  );
+  const filenames = await fs.readdir(path.join(process.cwd(), 'app/pakkumine'), {
+    recursive: true,
+  });
 
   const articles = (
     (await Promise.all(

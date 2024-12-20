@@ -5,10 +5,7 @@ const Table = ({ headers, rows }: { headers: string[]; rows: string[][] }) => {
         <thead className="bg-accent">
           <tr>
             {headers.map((header, index) => (
-              <th
-                key={index}
-                className="px-4 py-3 text-left text-sm font-semibold border-b"
-              >
+              <th key={index} className="px-4 py-3 text-left text-sm font-semibold border-b">
                 {header}
               </th>
             ))}
@@ -18,10 +15,7 @@ const Table = ({ headers, rows }: { headers: string[]; rows: string[][] }) => {
           {rows.map((row, index) => (
             <tr key={index} className="border-b last:border-b-0">
               {row.map((cell, cellIndex) => (
-                <td
-                  key={cellIndex}
-                  className="px-4 py-3 text-sm whitespace-normal"
-                >
+                <td key={cellIndex} className="px-4 py-3 text-sm whitespace-normal">
                   {cell}
                 </td>
               ))}
