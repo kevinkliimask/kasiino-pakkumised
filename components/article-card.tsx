@@ -14,14 +14,9 @@ const ArticleCard = async ({ title, slug, endDate }: ArticleCardProps) => {
 
   return (
     <Link href={`/pakkumine/${slug}`}>
-      <div className="flex flex-col h-full shadow-sm rounded-[10px] overflow-hidden hover:shadow-lg group hover:bg-accent transition-all">
+      <div className="flex flex-col h-full shadow-sm rounded-[10px] overflow-hidden hover:shadow-lg group hover:bg-accent transition-all dark:bg-accent dark:hover:bg-accent/90">
         <div className="relative w-full aspect-[16/9]">
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="object-cover group-hover:grayscale transition-all"
-          />
+          <Image src={image} alt={title} fill className="object-cover group-hover:grayscale transition-all" />
         </div>
         <div className="flex flex-col gap-2 p-4 flex-grow justify-between">
           <h2 className="text-lg font-semibold">{title}</h2>

@@ -1,8 +1,8 @@
-import Image from 'next/image';
 import { Link } from 'next-view-transitions';
-import ToggleDarkModeButton from './toggle-dark-mode-button';
+import Image from 'next/image';
 
 import slotMachine from '@/assets/slot-machine.gif';
+import ThemeSwitcher from '@/components/theme-switcher';
 
 const Header = async () => {
   return (
@@ -16,8 +16,8 @@ const Header = async () => {
           </div>
         </nav>
       </div>
-      <div className="absolute top-0 right-0 m-4 opacity-0 hover:opacity-100 ">
-        <ToggleDarkModeButton />
+      <div className="absolute top-0 right-0 p-4 opacity-0 hover:opacity-100 transition-all">
+        <ThemeSwitcher />
       </div>
     </header>
   );
