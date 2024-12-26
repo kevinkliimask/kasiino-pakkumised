@@ -3,9 +3,11 @@
 import { useEffect, useState } from 'react';
 
 const ThemeSwitcher = () => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
+    const theme = localStorage.getItem('theme') || 'light';
+    setTheme(theme);
     document.documentElement.classList.toggle('dark', theme === 'dark');
   }, [theme]);
 
